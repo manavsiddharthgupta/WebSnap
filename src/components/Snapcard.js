@@ -16,16 +16,20 @@ const Snapcard = () => {
   };
 
   const testing = () => {
-    if(url.length <= 1){
+    if (url.length <= 1) {
       return;
     }
     setLoading(true);
-    var apiUrl = `https://screenshot.abstractapi.com/v1/?api_key=92bf1c60a88b46e8ad4adb5c6af8d26e&url=${url}`;
+    //
+
+    var apiUrl = `https://api.apiflash.com/v1/urltoimage?access_key=3510a198072a45e3a22cafb21f210492&url=${url}&format=png&full_page=true&scroll_page=true&response_type=image`;
     fetch(apiUrl)
       .then((resp) => {
+        console.log(resp)
         return resp;
       })
       .then((data) => {
+        // console.log(data.url);
         download(data.url);
         setLoading(false);
       })

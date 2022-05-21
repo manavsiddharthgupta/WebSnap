@@ -22,6 +22,7 @@
   margin-top: 2em;
 }
 .SnapShot_Card input{
+  border: 0px solid #4a6fa1;
     margin-top: 0.8em;
     font-size: 1.2em;
     font-weight: 100;
@@ -31,8 +32,7 @@
     margin-bottom: 2em;
     border-radius: 50px;
     box-shadow: rgb(0 0 0 / 20%) 1px 1px 3px;
-    background-image: linear-gradient(rgb(3, 16, 39) 0%, rgb(2, 16, 29)); 
-    border: none;
+    background-image: linear-gradient(rgb(3, 16, 39) 0%, rgb(2, 16, 29));
     color: rgb(74, 111, 161);
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -41,6 +41,10 @@
   letter-spacing: 1px;
 }
 
+input.invalid{
+  border: 1px solid red;
+  background-color: #e8a1a1;
+}
 
 
 /* CSS */
